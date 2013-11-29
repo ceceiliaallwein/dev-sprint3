@@ -1,0 +1,11 @@
+This is where the answers to Lab 3 questions go
+Name: Ceceilia Allwein 
+
+
+Question: What does file.readline do? 
+Answer: Reads the first line in a file. 
+Use: Eyeballing a text file for content, e.g. loop through and print the first five lines to get an idea of what it is. 
+
+Question: What does string.strip do? 
+Answer: Removes both leading and trailing characters from a string. 
+Use: Would be useful for determining if something is palindromic. 

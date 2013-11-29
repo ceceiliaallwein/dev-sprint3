@@ -11,10 +11,11 @@ def count(fruit):
 	index = 0
 	while index < len(fruit):
 		letter = fruit[index]
-		print letter
+		# print letter
+		return letter
 		index = index + 1
 
-#count('banana')
+#print count('banana')
 
 
 def find1(word,letter):
@@ -28,10 +29,10 @@ def find1(word,letter):
 	index = 0 
 	while index < len(word):
 		if word[index] == letter:
-			print index
+			# print index
 			return index 
 		index = index + 1
-	print -1
+	# print -1
 	return -1
 	
 
@@ -44,12 +45,12 @@ def find2(word,letter,index):
 			print index 
 			return index
 		index = index + 1
-	print 'Not found'
+	# print 'Not found'
 	return -1
 
-#find1('banana','a')
+#print find1('banana','a')
 
-#find2('banana','a',7)
+#print find2('banana','a',7)
 
 
 def quantity():
@@ -62,9 +63,9 @@ def quantity():
 	for letter in word: 
 		if letter == 'a':
 			count = count + 1
-	print count
+	return count
 
-#quantity()
+# print quantity()
 
 
 
@@ -78,7 +79,7 @@ def in_both(word1,word2):
 		if letter in word2:
 			print letter 
 
-#in_both('apples','oranges')
+#print in_both('apples','oranges')
 
 
 

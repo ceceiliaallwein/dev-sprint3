@@ -1,0 +1,35 @@
+<!--inherits html via jinja2-->
+{% extends "base.html" %}
+
+<!--adds body content to parent file-->
+{% block body %}
+	<h2>Home, home on the range...</h2>
+	<i>Kafka-Fragmente</i> by Gyorgy Kurtag<br/></br>
+	<audio controls="controls" autoplay="autoplay"> 
+		<ul>
+			{% for song in songs %}
+			<li><a onclick="changeTrack('{{song}}')" href="javascript:void(0);">{{song}}</a></li>
+			{% endfor %}
+		</ul>
+	</audio>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			Results: 
+			<pre>
+				{% for messages in messages %}
+{{ message }}
+				{% endfor %}
+			</pre>
+		{% endif %}
+	{% endwith %}
+	<script type="text/javascript">
+		function changeTrack(song){
+			$('audio').attr('src','/static/music/'+song);
+		}
+	</script>
+{% endblock %}
+
+{% block nav %} 
+	<li><a href="{{url_for('main')}}">Back</a></li>
+	<li><a href="{{url_for('main')}}">Remote</a></li>
+{% endblock %}
