@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 {% block body %}
-    <h1>Login</h1>
+    <h1>Howdy, cowgirl!</h1>
     {% if 'username' in session %}
-        <p>Welcome back {{session['username']}}!</p>
+        <p>You're logged in. Don't forget to logout, {{session['username']}}!</p>
+
         <p>To logout, click this button:</p>
         <form action="{{url_for('login')}}" method="post">
             <input type="submit" name="logout" value="logout" />
         </form>
     {% else %}
-        <p>Enter your credentials:</p>
+        <p>Now I don't have to tell you good folk what's been happening in our beloved little town. Sheriff murdered, crops burned, stores looted, people stampeded, and cattle raped. The time has come to act, and act fast.</p>
+        <p>Enter your credentials and save yourself from further prose:</p>
         <form action="{{url_for('login')}}" method="post">
-            <p>Username:<br />
+            <p>Username<br />
             <input type="text" name="username" /></p>
-            <p>Password:<br />
+            <p>Password<br />
             <input type="password" name="passwd" /></p>
             <p><input type="submit" value="submit" /></p>
         </form>

@@ -3,15 +3,18 @@
 
 <!--adds body content to parent file-->
 {% block body %}
-	<h2>Home, home on the range...</h2>
-	<i>Kafka-Fragmente</i> by Gyorgy Kurtag<br/></br>
-	<audio controls="controls" autoplay="autoplay"> 
-		<ul>
-			{% for song in songs %}
-			<li><a onclick="changeTrack('{{song}}')" href="javascript:void(0);">{{song}}</a></li>
-			{% endfor %}
-		</ul>
-	</audio>
+	<h2>Home, home on the range...</h2></br>
+	<p>
+		<i>Kafka-Fragmente</i> by Gyorgy Kurtag</br>
+		Ceceilia Allwein + Hye-Jin Kim</br>
+		Yellow Barn Music Festival 2011</br>
+	</p>
+	<audio controls="controls" autoplay="autoplay"></audio>
+	<ul>
+		{% for song in songs %}
+		<li><a onclick="changeTrack('{{song}}')" href="javascript:void(0);">{{song}}</a></li>
+		{% endfor %}
+	</ul>
 	{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			Results: 
