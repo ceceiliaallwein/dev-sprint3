@@ -22,7 +22,7 @@ def rot13_ctrl_decode(arg):
 rot13_encode = rot13_ctrl_encode('My name is Ceceilia') 
 rot13_decode = rot13_ctrl_decode(rot13_encode)
 
-print "SOLUTION: built-in rot13 from codecs."
+print "SOLUTION"
 print "Your code is: " + rot13_encode
 print "The answer is: " + rot13_decode
 print ""
@@ -43,7 +43,7 @@ def rot_by_int(string, integer):
 
 
 # print "SOLUTION: Adaptation of built-in rot13 to rotate by a given int"
-print "Your code is: " + rot_by_int('ceceilia',13)
+# print "Your code is: " + rot_by_int('ceceilia',13)
 
 
 
@@ -81,7 +81,7 @@ def rot13_mine(string,integer):
 	return 'Your code is: ' + result
 
 
-print rot13_mine('My name is Ceceilia',13)
+# print rot13_mine('My name is Ceceilia',13)
 
 
 
